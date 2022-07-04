@@ -1,3 +1,146 @@
 //====================================================================================================
+.footer {
+   padding: 25px 0;
+   background-color: #323232;
+   // .footer__container
+   &__container {}
+
+   // .footer__top
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      @media (max-width:$mobile){
+          flex-direction: column; 
+          margin-bottom: 20px;
+          text-align: center;
+      }
+   }
+   // .footer__logo
+   &__logo {
+      font-family: 'Play';
+      font-size: 18px;
+      line-height: 267%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      padding-left: 74px;
+      position: relative;
+      &::before{
+         content:'';
+         position: absolute;
+         background: url('../img/footer/Union-footer.svg')no-repeat;
+         top: 0;
+         left: 0;
+         width: 62px;
+         height: 51px;
+      }
+   }
+   // .footer__menu
+   &__menu {}
+   &__mail-tablet{
+      font-size: 16px;
+      line-height: math.div(22 ,16 );
+      color: #FFFFFF;
+      opacity: 0.5;
+      @media (min-width:$tablet){
+          display: none; 
+      }
+   }
+   // .footer__contact
+   &__contact {}
+   // .footer__bottom
+   &__bottom {
+      display: flex;
+      gap: 20px;
+      @media (max-width:$mobile){
+         flex-direction: column; 
+         align-items: center;
+         text-align: center;
+     }
+   }
+   // .footer__copy
+   &__copy {
+      flex: 1 1 auto;
+      font-size: 16px;
+      line-height: math.div(22 ,16 );
+      color: #FFFFFF;
+      opacity: 0.5;
+   }
+   // .footer__mail
+   &__mail {
+      @media (max-width:$tablet){
+         display: none;
+      }
+      font-size: 16px;
+      line-height: math.div(22 ,16 );
+      color: #FFFFFF;
+      opacity: 0.5;
+      @media (any-hover: hover){
+         &:hover{
+            opacity: 0.8;
+         }
+      }
+   }
+   // .footer__adress
+   &__adress {
+      font-size: 16px;
+      line-height: math.div(22 ,16 );
+      color: #FFFFFF;
+   }
+}
+
+.menu-footer {
+   @media (max-width:$tablet){
+      display: none;
+   }
+   // .menu-footer__list
+   &__list {
+      display: flex;
+      @include adaptiveValue("gap",24 ,15 );
+      padding: 0 15px;
+      flex-wrap: wrap;
+   }
+   // .menu-footer__item
+   &__item {}
+   // .menu-footer__link
+   &__link {
+      font-size: 16px;
+      line-height: math.div(22 ,16 );
+      color: #FFFFFF;
+      @media (any-hover: hover){
+         &:hover{
+            opacity: 0.5;
+         }
+      }
+   }
+   // .menu-footer__number
+   &__number {
+      display: inline;
+      font-size: 16px;
+      line-height: math.div(22 ,16 );
+      color: #FFFFFF;
+      padding-right: 10px;
+      @media (max-width:$mobile){
+          display: block;
+          margin-bottom: 8px; 
+      }
+   }
+   // .menu-footer__call
+   &__call {
+      font-size: 16px;
+      line-height: math.div(22 ,16 );
+      color: #FFFFFF;
+      opacity: 0.5;
+      border-bottom: 2px dashed #656565;
+      @media (any-hover: hover){
+         &:hover{
+            opacity: 0.8;
+         }
+      }
+   }
+}
+
 
 //====================================================================================================

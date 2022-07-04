@@ -451,8 +451,6 @@
 }
 .info-company-contacts > *:not(:last-child) {margin-bottom: 32px;}
 .info-company-contacts {
-   display: flex;
-   flex-direction: column;
    span{
       padding-right: 50px;
       opacity: 0.54;
@@ -469,6 +467,7 @@
    }
    // .info-company-contacts__adress
    &__tel{
+      display: inline-block;
       transition: color 0.3s ease 0s;
       span{
          padding-right: 25px;
@@ -484,6 +483,7 @@
    }
    // .info-company-contacts__mail
    &__mail {
+      display: inline-block;
       transition: color 0.3s ease 0s;
       &:hover{
          color: #007FA7;

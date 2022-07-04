@@ -561,6 +561,125 @@ h6 {
 }
 */
 
+.footer {
+  padding: 25px 0;
+  background-color: #323232;
+}
+
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.footer__logo {
+  font-family: "Play";
+  font-size: 18px;
+  line-height: 267%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-left: 74px;
+  position: relative;
+}
+
+.footer__logo::before {
+  content: "";
+  position: absolute;
+  background: url("../img/footer/Union-footer.svg") no-repeat;
+  top: 0;
+  left: 0;
+  width: 62px;
+  height: 51px;
+}
+
+.footer__mail-tablet {
+  font-size: 16px;
+  line-height: 1.375;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.footer__copy {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-size: 16px;
+  line-height: 1.375;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer__mail {
+  font-size: 16px;
+  line-height: 1.375;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer__adress {
+  font-size: 16px;
+  line-height: 1.375;
+  color: #FFFFFF;
+}
+
+.menu-footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@supports (gap: clamp( 0.9375rem , 0.7796052632rem  +  0.7894736842vw , 1.5rem )) {
+  .menu-footer__list {
+    gap: clamp( 0.9375rem , 0.7796052632rem  +  0.7894736842vw , 1.5rem );
+  }
+}
+
+@supports not (gap: clamp( 0.9375rem , 0.7796052632rem  +  0.7894736842vw , 1.5rem )) {
+  .menu-footer__list {
+    gap: calc(0.9375rem + 0.5625 * (100vw - 20rem) / 71.25);
+  }
+}
+
+.menu-footer__link {
+  font-size: 16px;
+  line-height: 1.375;
+  color: #FFFFFF;
+}
+
+.menu-footer__number {
+  display: inline;
+  font-size: 16px;
+  line-height: 1.375;
+  color: #FFFFFF;
+  padding-right: 10px;
+}
+
+.menu-footer__call {
+  font-size: 16px;
+  line-height: 1.375;
+  color: #FFFFFF;
+  opacity: 0.5;
+  border-bottom: 2px dashed #656565;
+}
+
 .main-block {
   position: relative;
 }
@@ -1248,16 +1367,6 @@ h6 {
   margin-bottom: 32px;
 }
 
-.info-company-contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .info-company-contacts span {
   padding-right: 50px;
   opacity: 0.54;
@@ -1285,6 +1394,7 @@ h6 {
 }
 
 .info-company-contacts__tel {
+  display: inline-block;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
@@ -1301,6 +1411,7 @@ h6 {
 }
 
 .info-company-contacts__mail {
+  display: inline-block;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
@@ -1317,6 +1428,10 @@ h6 {
 }
 
 @media (min-width: 61.99875em) {
+  .footer__mail-tablet {
+    display: none;
+  }
+
   .about-company__content {
     padding-top: 25px;
   }
@@ -1424,6 +1539,14 @@ h6 {
             transform: rotate(45deg);
   }
 
+  .footer__mail {
+    display: none;
+  }
+
+  .menu-footer {
+    display: none;
+  }
+
   .advantages__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1461,6 +1584,31 @@ h6 {
     display: none;
   }
 
+  .footer__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .footer__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+
+  .menu-footer__number {
+    display: block;
+    margin-bottom: 8px;
+  }
+
   .main-block__title {
     font-size: 26px;
   }
@@ -1487,6 +1635,18 @@ h6 {
     background: rgba(0, 128, 167, 0.062745098);
     border: 1px solid #007FA7;
     color: #007FA7;
+  }
+
+  .footer__mail:hover {
+    opacity: 0.8;
+  }
+
+  .menu-footer__link:hover {
+    opacity: 0.5;
+  }
+
+  .menu-footer__call:hover {
+    opacity: 0.8;
   }
 
   .industries__item:hover {

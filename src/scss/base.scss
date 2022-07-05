@@ -174,26 +174,31 @@
       line-height: math.div(19 ,16 );
    }
 }
-.content-image{
+.media-post{
    position: relative;
-   @media (max-width:$tablet){
-      margin-right: 15px;
-   }
+   flex: 0 1 59%;
    &__decor{
          position: absolute;
          background: #007FA7;
-         opacity: 0.2;
+         opacity: 0.9;
          border-radius: 6px;
-         width: 100%;
-         padding-bottom: 48%;
-         @include adaptiveValue("top",-30 ,-11 );
-         @include adaptiveValue("right",-30 ,-11 );
+         width: 97.5%;
+         padding-bottom: 45%;
+         @include adaptiveValue("top",0 ,0 );
+         @include adaptiveValue("right",0 ,0 );
+         opacity: 0.2;
    }
-   img{
+   &__image{
       position: relative;
-      border-radius: 6px;
-      max-width: 100%;
       z-index: 2;
+      @include adaptiveValue("padding-top",30 ,10 );
+      @include adaptiveValue("padding-right",30 ,10 );
+      img{
+         border-radius: 6px;
+         overflow: hidden;
+         max-width: 100%;
+      }
+
    }
 }
 .more-btn{
@@ -224,4 +229,55 @@
       gap: 30px;
       justify-content: center;
       align-items: center;
+}
+//------------about-company POST----------------
+.about-company {
+   @include adaptiveValue("padding-bottom",80 ,50 );
+   // .about-company__container
+
+   &__container {
+   }
+   // .about-company__title
+   &__title {
+      @include adaptiveValue("margin-bottom",36 ,30 );
+   }
+   // .about-company__post
+
+   &__post {
+   }
+}
+.post-rewerce{
+   display: flex;
+   gap: 32px;
+   @media (max-width:$tablet){
+      flex-direction: column-reverse;
+      align-items: center;
+   }
+}
+.post {
+   display: flex;
+   gap: 32px;
+   @media (max-width:$tablet){
+      flex-direction: column;
+      align-items: center;
+   }
+   // .post__content
+
+   &__content {
+      flex: 0 1 41%;
+      line-height: math.div(22 ,16 );
+      p{
+         &:not(:last-child) {
+            @include adaptiveValue("margin-bottom",40 ,20 );
+         }
+
+      }
+      @media (min-width:$tablet){
+          padding-top: 25px; 
+      }
+      @media (max-width:$mobile){
+         text-align: center; 
+      }
+   }
+
 }

@@ -21,6 +21,56 @@
 		display: block;
 	}
 }
+.__icon-arrow-right:before {
+   content: "\e901";
+ }
+ .__icon-air-pollution:before {
+   content: "\e900";
+ }
+ .__icon-cogwheels:before {
+   content: "\e902";
+ }
+ .__icon-electric-car:before {
+   content: "\e903";
+   color: #007fa7;
+ }
+ .__icon-filter:before {
+   content: "\e904";
+ }
+ .__icon-herb:before {
+   content: "\e905";
+ }
+ .__icon-hospital:before {
+   content: "\e906";
+ }
+ .__icon-industrial:before {
+   content: "\e907";
+ }
+ .__icon-industry:before {
+   content: "\e908";
+   color: #fff;
+ }
+ .__icon-like:before {
+   content: "\e909";
+   color: #fff;
+ }
+ .__icon-pharmacy:before {
+   content: "\e90a";
+ }
+ .__icon-premises:before {
+   content: "\e90b";
+ }
+ .__icon-respirator-mask:before {
+   content: "\e90c";
+ }
+ .__icon-settings:before {
+   content: "\e90d";
+ }
+ .__icon-stopwatch:before {
+   content: "\e90e";
+   color: #fff;
+ }
+/*
 .__icon-air-pollution:before {
    content: "\e900";
  }
@@ -69,4 +119,4 @@
    content: "\e90e";
    color: #fff;
  }
- 
+ */

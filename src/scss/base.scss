@@ -225,6 +225,9 @@
       flex-direction: column-reverse;
       align-items: center;
    }
+   @media (max-width:$mobile){
+      text-align: center; 
+   }
 }
 .post {
    display: flex;
@@ -232,13 +235,18 @@
       flex-direction: column;
       align-items: center;
    }
+   @media (max-width:$mobile){
+      text-align: center; 
+   }
    // .post__content
-
    &__content {
       flex: 0 1 40.6%;
-      padding-right: 32px;
       @media (min-width:$tablet){
          padding-top: 56px;  
+         padding-right: 32px;
+      }
+      @media (max-width:$tablet){
+         padding-top: 32px;
       }
       line-height: math.div(22 ,16 );
       p{
@@ -246,18 +254,15 @@
             @include adaptiveValue("margin-bottom",40 ,20 );
          }
       }
-
-      @media (max-width:$tablet){
-          padding-bottom: 36px;
-      }
-      @media (max-width:$mobile){
-         text-align: center; 
-      }
    }
 }
 .content-right{
    padding-left: 32px;
    padding-right: 0;
+   @media (max-width:$tablet){
+      padding-left: 0;
+      padding-top: 32px;
+   }
 }
 .media-post{
    position: relative;

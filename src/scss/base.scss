@@ -3,7 +3,7 @@
 @import "base/forms/forms";
 
 // Стили попапов
-// @import "base/popup";
+ @import "base/popup";
 
 // Стили спойлеров
 // @import "base/spollers";
@@ -135,7 +135,7 @@
    letter-spacing: 0.05em;
    text-transform: uppercase;
 }
-%itemTitle{
+.item-title{
    font-family: 'Play';
    font-weight: 700;
    font-size: 22px;
@@ -152,26 +152,6 @@
    line-height: math.div(22 ,16 );
    @media (max-width:$mobile){
        line-height: math.div(19 ,14 ); 
-   }
-}
-%textWhite{
-   @include adaptiveValue("font-size",16 ,14 );
-   line-height: math.div(22 ,16 );
-   color: #fff;
-   @media (max-width:$mobile){
-       line-height: math.div(19 ,14 ); 
-   }
-}
-%titleWhite{
-   font-family: 'Play';
-   font-weight: 700;
-   @include adaptiveValue("font-size",22 ,16 );
-   line-height: math.div(25 ,22 );
-   letter-spacing: 0.05em;
-   text-transform: uppercase;
-   color: #FFFFFF;
-   @media (max-width:$mobile){
-      line-height: math.div(19 ,16 );
    }
 }
 .more-btn{
@@ -297,6 +277,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   text-align: center;
    gap: 18px;
    // .pagination__container
    &__container {
@@ -305,6 +286,7 @@
    &__general {
       opacity: 0.5;
       line-height: math.div(22 ,16 );
+      @include adaptiveValue("font-size",16 ,14 );
       @media (any-hover: hover){
          &:hover{
             text-decoration: underline;
@@ -321,6 +303,7 @@
    // .pagination__here
 
    &__here {
+      @include adaptiveValue("font-size",16 ,14 );
       line-height: math.div(22 ,16 );
    }
 }

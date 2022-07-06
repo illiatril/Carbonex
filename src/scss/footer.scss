@@ -3,7 +3,8 @@
    padding: 25px 0;
    background-color: #323232;
    // .footer__container
-   &__container {}
+   &__container {
+   }
 
    // .footer__top
    &__top {
@@ -11,6 +12,9 @@
       justify-content: space-between;
       align-items: center;
       gap: 20px;
+      @media (min-width:$mobile){
+          margin-bottom: 20px; 
+      }
       @media (max-width:$mobile){
           flex-direction: column; 
           margin-bottom: 20px;

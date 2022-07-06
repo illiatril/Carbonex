@@ -1,0 +1,71 @@
+.areas-of-use {
+   @include adaptiveValue("padding-bottom",80 ,30 );
+   // .areas-of-use__container
+
+   &__container {
+   }
+
+   // .areas-of-use__title
+
+   &__title {
+      @include adaptiveValue("margin-bottom",50 ,30 );
+   }
+
+   // .areas-of-use__solutions
+
+   &__solutions {
+      text-align: center;
+      @include adaptiveValue("margin-bottom",80 ,50 );
+   }
+
+   // .areas-of-use__posts
+
+   &__posts {
+   }
+
+   // .areas-of-use__post
+
+   &__post {
+   }
+}
+.solutions {
+   // .solutions__title
+
+   &__title {
+      @include adaptiveValue("margin-bottom",36 ,24 );
+   }
+
+   // .solutions__items
+
+   &__items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      @include adaptiveValue("gap",150 ,20 );
+   }
+
+   // .solutions__item
+
+   &__item {
+   }
+}
+.item-solutions {
+   // .item-solutions__icon
+
+   &__icon {
+      font-size: 80px;
+      &:not(:last-child) {margin-bottom: 10px;}
+   }
+
+   // .item-solutions__title
+
+   &__title {
+      &:not(:last-child) {margin-bottom: 10px;}
+   }
+
+   // .item-solutions__text
+
+   &__text {
+      line-height: math.div(22 ,16 );
+      &:not(:last-child) {margin-bottom: 10px;}
+   }
+}

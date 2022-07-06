@@ -380,7 +380,6 @@ h6 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 40.6%;
           flex: 0 1 40.6%;
-  padding-right: 32px;
   line-height: 1.375;
 }
 
@@ -1848,6 +1847,7 @@ h6 {
 @media (min-width: 61.99875em) {
   .post__content {
     padding-top: 56px;
+    padding-right: 32px;
   }
 
   .footer__mail-tablet {
@@ -1877,7 +1877,12 @@ h6 {
   }
 
   .post__content {
-    padding-bottom: 36px;
+    padding-top: 32px;
+  }
+
+  .content-right {
+    padding-left: 0;
+    padding-top: 32px;
   }
 
   .menu__body {
@@ -2019,7 +2024,11 @@ h6 {
 }
 
 @media (max-width: 47.99875em) {
-  .post__content {
+  .post-rewerce {
+    text-align: center;
+  }
+
+  .post {
     text-align: center;
   }
 

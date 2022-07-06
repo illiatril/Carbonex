@@ -1,0 +1,139 @@
+.company-contacts {
+}
+.contacts {
+		// .contacts__title
+		&__title {
+         @include adaptiveValue("margin-bottom",36 ,30 );
+		}
+		// .contacts__body
+		&__body {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         @media (max-width:$tablet){
+            flex-direction: column-reverse;
+            align-items: center;
+         }
+		}
+      &__content{
+         flex: 0 1 41%;
+         padding-right: 40px;
+         display: flex;
+         flex-direction: column;
+         gap: 32px;
+         @media (max-width:$tablet){
+            padding-right: 0;
+            padding-top: 30px;
+         }
+      }
+		// .contacts__info
+		&__info {
+         max-width: 400px;
+		}
+		// .contacts__requisites
+		&__requisites {
+         max-width: 400px;
+		}
+		// .contacts__location
+		&__location {
+         flex: 0 1 59%;
+         padding-top: 30px;
+		}
+		// .contacts__decor
+		// .contacts__map
+		&__map {
+         position:relative;
+         @include adaptiveValue("width",803 ,277 );
+         @include adaptiveValue("height",474 ,165 );
+         &::before{
+            content:'';
+            position: absolute;
+            background: #007FA7;
+            opacity: 0.9;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+            @include adaptiveValue("top",-30 ,-10 );
+            @include adaptiveValue("right",-30 ,-10 );
+            opacity: 0.2;
+         }
+         iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+         }
+		}
+}
+.info-contacts {
+   &__title {
+      font-family: 'Play';
+      font-weight: 700;
+      @include adaptiveValue("font-size",22 ,16 );
+      line-height: math.div(25 ,22 );
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      &:not(:last-child) {margin-bottom: 24px;}
+   }
+		// .info-contacts__adress
+		&__adress {
+         display: flex;
+         gap: 50px;
+         line-height: math.div(22 ,16 );
+         span{
+            opacity: 0.5;
+         }
+         &:not(:last-child) {margin-bottom: 15px;}
+		}
+		// .info-contacts__tel
+		&__tel {
+         display: flex;
+         gap: 32px;
+         span{
+            opacity: 0.5;
+         }
+		}
+		// .info-contacts__department
+		&__department {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         line-height: math.div(22 ,16 );
+         span{
+            opacity: 1;
+            color: #007FA7;
+         }
+         a{
+            transition: color 0.3s ease 0s;
+            @media (any-hover: hover){
+               &:hover{
+                  color: #007FA7;
+               }
+            }
+         }
+		}
+		// .info-contacts__number-1
+		&__number-1 {
+		}
+		// .info-contacts__number-2
+		&__number-2 {
+		}
+}
+.requisites-contacts {
+		// .requisites-contacts__title
+		&__title {
+         font-family: 'Play';
+         font-weight: 700;
+         @include adaptiveValue("font-size",22 ,16 );
+         line-height: math.div(25 ,22 );
+         letter-spacing: 0.05em;
+         text-transform: uppercase;
+         &:not(:last-child) {margin-bottom: 24px;}
+		}
+		// .requisites-contacts__text
+		&__text {
+         line-height: math.div(22 ,16 );
+		}
+}

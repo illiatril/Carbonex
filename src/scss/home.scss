@@ -361,9 +361,7 @@
    &__title {
       @include adaptiveValue("margin-bottom",66 ,30 );
    }
-
    // .company-contacts__body
-
    &__body {
       display: flex;
       justify-content: space-between;
@@ -380,33 +378,35 @@
    // .company-contacts__location
    &__location {
       position: relative;
-   }
-   // .company-contacts__decor
-   &__decor {
-      position: absolute;
-         background: #007FA7;
-         opacity: 0.2;
-         border-radius: 6px;
-         width: 100%;
-         padding-bottom: 48%;
-         @include adaptiveValue("top",-30 ,-11 );
-         @include adaptiveValue("right",-30 ,-11 );
+      flex: 0 1 51%;
+      padding-top: 30px;
    }
    // .company-contacts__map
    &__map {
       position:relative;
-      @include adaptiveValue("width",706 ,277 );
-      @include adaptiveValue("height",351 ,165 );
+      @include adaptiveValue("width",684 ,277 );
+      @include adaptiveValue("height",340 ,165 );
+      &::before{
+         content:'';
+         position: absolute;
+         background: #007FA7;
+         opacity: 0.9;
+         border-radius: 6px;
+         width: 100%;
+         height: 100%;
+         @include adaptiveValue("top",-30 ,-10 );
+         @include adaptiveValue("right",-30 ,-10 );
+         opacity: 0.2;
+      }
       iframe{
          position: absolute;
          top: 0;
          left: 0;
          width: 100%;
          height: 100%;
+         border-radius: 6px;
       }
    }
-}
-.category-title {
 }
 .info-company-contacts > *:not(:last-child) {margin-bottom: 32px;}
 .info-company-contacts {
@@ -453,6 +453,4 @@
    }
    &__all{}
    &__arrow{}
-}
-.more-btn {
 }

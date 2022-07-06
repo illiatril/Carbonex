@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Контакты"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+            <div class="contacts">
+               <div class="contacts__container">
+                  <div class="pagination">
+                        <a href="./index.html" class="pagination__general">Главная</a>
+                        <div class="pagination__icon __icon-arrow-right"></div>
+                        <div class="pagination__here">Контакты</div>
+                  </div>
+                  <section class="company-contacts contacts">
+                        <div class="contacts__title category-title">КОНТАКТЫ</div>
+                        <div class="contacts__body">
+                           <div class="contacts__content">
+                              <div class="contacts__info info-contacts">
+                                 <div class="info-contacts__title">Контактная информация</div>
+                                 <div class="info-contacts__adress"><span>Адрес:</span> Шевченка бульв. 52, Маріуполь, Донецька, 87500</div>
+                                 <div class="info-contacts__tel">
+                                    <span>Телефон:</span>
+                                    <div class="info-contacts__department">
+                                       <span>Отдел заказов:</span>
+                                       <a href="" class="info-contacts__number-1">+(380) 50-628-02-25</a>
+                                       <a href="" class="info-contacts__number-2">+(380) 50-628-02-25</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="contacts__requisites requisites-contacts">
+                                 <div class="requisites-contacts__title">Реквизиты</div>
+                                 <div class="requisites-contacts__text"><p>Реквизиты АО "Сорбент"</p>
+                                    <p>Акционерное общество Сорбент</p>
+                                    <p>вулиця Морських Десантників, 19-А, Маріуполь, Донецька область, 87500</p>
+                                    <p>ИНН 5908001417</p>
+                                    <p>КПП 590801001</p>
+                                    <p>ОГРН 1025901602770</p>
+                                    <p>Р/С 40702810800320300206</p>
+                                    <p>Ф-л Банка ГПБ (АО)</p>
+                                    <p>К/С 30101810200000000808</p>
+                                    <p>БИК 045773808</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="contacts__location">
+                              <div id="map" class="contacts__map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86873.43739954225!2d37.51192299382428!3d47.122690460762485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e6a7bee7582b%3A0xa5d118300a75b5ce!2z0JzQsNGA0LjRg9C_0L7Qu9GMLCDQlNC-0L3QtdGG0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA4NzUwMA!5e0!3m2!1sru!2sua!4v1656943966500!5m2!1sru!2sua" width="803" height="474" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                           </div>
+                        </div>
+                  </section>
+               </div>
+            </div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

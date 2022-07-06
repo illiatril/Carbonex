@@ -1,39 +1,4 @@
-.pagination {
-   @include adaptiveValue("margin-bottom",37 ,20 );
-   @include adaptiveValue("padding-top",202 ,153 );
-   // .pagination__container
 
-   &__container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 18px;
-   }
-
-   // .pagination__general
-
-   &__general {
-      opacity: 0.5;
-      line-height: math.div(22 ,16 );
-      @media (any-hover: hover){
-         &:hover{
-            text-decoration: underline;
-         }
-      }
-   }
-
-   // .pagination__icon
-
-   &__icon {
-      font-size: 24px;
-   }
-
-   // .pagination__here
-
-   &__here {
-      line-height: math.div(22 ,16 );
-   }
-}
 //=========================================================================
 .about-company {
 
@@ -64,27 +29,17 @@
 .cooperation {
    position: relative;
    @include adaptiveValue("padding-bottom",80 ,30 );
-   // .cooperation__container
-
-   &__container {
-      text-align: center;
-      margin-bottom: 50px;
-   }
-
    // .cooperation__title
-
    &__title {
       &:not(:last-child) {margin-bottom: 20px;}
    }
-
    // .cooperation__text
-
    &__text {
       line-height: math.div(22 ,16 );
+      text-align: center;
+      &:not(:last-child) {margin-bottom: 50px;}
    }
-
    // .cooperation__logo
-
    &__logo {
       position: relative;
       width: 100%;

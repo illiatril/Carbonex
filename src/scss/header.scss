@@ -110,9 +110,6 @@
    }
    // .menu__contacts
    &__contacts {
-      @media (min-width:$mobile){
-          display: none; 
-      }
    }
    // .menu__call
    &__call {
@@ -239,15 +236,20 @@
 		}
 	}
 }
-.contacts-menu {
+.menu__contacts__mobile{
+   @media (min-width:$mobile){
+      display: none; 
+  }
+}
+.menu__contacts__pc{
    @media (max-width:$mobile){
-       display: none; 
-   }
-   z-index: 5;
-      display: flex;
-      gap: 50px;
-      align-items: center;
-      flex: 0 0 auto;
+      display: none; 
+  }
+  z-index: 5;
+     display: flex;
+     gap: 50px;
+     align-items: center;
+     flex: 0 0 auto;
 }
 
 //====================================================================================================

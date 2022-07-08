@@ -9,7 +9,7 @@
 // @import "base/spollers";
 
 // Стили табов
-// @import "base/tabs";
+//@import "base/tabs";
 
 // Стили карт
 // @import "base/maps";
@@ -169,6 +169,12 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: #FFFFFF;
+      transition: background 0.3s ease 0s;
+      @media (any-hover: hover){
+         &:hover{
+            background: #006F92;
+         }
+      }
    }
    // .item-products__btn
    &__arrow {
@@ -222,13 +228,18 @@
    &__content {
       flex: 0 1 40.6%;
       @media (min-width:$tablet){
-         padding-top: 56px;  
+         padding-top: 39px;  
          padding-right: 32px;
       }
       @media (max-width:$tablet){
          padding-top: 32px;
       }
       line-height: math.div(22 ,16 );
+   }
+   &__title{
+      &:not(:last-child) {margin-bottom: 10px;}
+   }
+   &__text{
       p{
          &:not(:last-child) {
             @include adaptiveValue("margin-bottom",40 ,20 );
@@ -305,5 +316,6 @@
    &__here {
       @include adaptiveValue("font-size",16 ,14 );
       line-height: math.div(22 ,16 );
+      color: #007FA7;
    }
 }

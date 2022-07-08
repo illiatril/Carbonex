@@ -1,0 +1,108 @@
+.news {
+   // .news__slider
+   &__slider {
+      .swiper-controls{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         @include adaptiveValue("gap",24 ,18 );
+      }
+      .swiper-pagination {
+      }
+      .swiper-pagination-bullets{
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         @include adaptiveValue("gap",24 ,18 );
+      }
+      .swiper-pagination-bullet{
+         cursor: pointer;
+         width: 24px;
+         height: 24px;
+         background: #007FA7;
+         opacity: 0.2;
+         border-radius: 50%;
+      }
+      .swiper-pagination-bullet-active{
+         opacity: 1;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+         font-size: 20px;
+         color: #fff;
+         background: #007FA7;
+         padding: 12px;
+         border-radius: 50%;
+         @media (any-hover: hover){
+            &:hover{
+               opacity: 0.35;
+            }
+         }
+      }
+      .swiper-button-prev {
+         transform: rotate(-180deg);
+      }
+   }
+   // .news__wrapper
+   &__wrapper {
+      @include adaptiveValue("margin-bottom",50 ,30 );
+   }
+   // .news__slide
+   &__slide {
+      padding: 0 15px;
+   }
+   // .news__posts
+   &__posts {
+   }
+   // .news__title
+   &__title {
+   }
+   // .news__post
+   &__post {
+      &:not(:last-child) {@include adaptiveValue("margin-bottom",50 ,30 );;}
+   }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.news-media-post {
+   position: relative;
+   flex: 0 1 59.4%;
+   @include adaptiveValue("padding-top",30 ,10 );
+   @media (min-width:$mobile){
+      @include adaptiveValue("padding-left",30 ,10 ); 
+   }
+   @media (max-width:$tablet){
+      @include adaptiveValue("padding-right",30 ,10 );
+   }
+   &__decor{
+         position: absolute;
+         background: #007FA7;
+         opacity: 0.9;
+         border-radius: 6px;
+         width: 96.5%;
+         padding-bottom: 47%;
+         @media (min-width:$mobile){
+            left: 0; 
+         }
+         top: 0;
+         opacity: 0.2;
+         @media (max-width:$mobile){
+            right: 0;
+            top: 0;   
+         }
+   }
+   &__image{
+      position: relative;
+      z-index: 2;
+      img{
+         border-radius: 6px;
+         overflow: hidden;
+         max-width: 100%;
+      }
+
+   }
+}

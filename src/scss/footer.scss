@@ -40,6 +40,11 @@
          width: 62px;
          height: 51px;
       }
+      @media (any-hover: hover){
+         &:hover{
+            opacity: 0.5;
+         }
+      }
    }
    // .footer__menu
    &__menu {}

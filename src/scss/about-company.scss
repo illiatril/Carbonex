@@ -1,27 +1,19 @@
 
 //=========================================================================
 .about-company {
-
    // .about-company__container
-
    &__container {
    }
-
    // .about-company__title
-
    &__title {
    }
-
    // .about-company__posts
-
    &__posts {
       display: flex;
       flex-direction: column;
       @include adaptiveValue("gap",57 ,30 );
    }
-
    // .about-company__post
-
    &__post {
    }
 }
